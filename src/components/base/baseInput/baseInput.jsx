@@ -11,9 +11,10 @@ export default function BaseInput({
                                       disabled = false,
                                       error = false,
                                       addClass,
+                                      icon = "",
                                       ...props
                                   }) {
-    const inputClass = [styles.input, addClass]
+    const inputClass = [styles.input, addClass, icon && styles.inputPaddingLeft]
     if (error) {
         inputClass.push(styles.inputError)
     }
@@ -41,6 +42,9 @@ export default function BaseInput({
                     placeholder={placeholder}
                     {...props}
                 />
+                {
+                    icon && <img src={`/images/${icon}`} alt="" className={styles.input__icon}/>
+                }
             </div>
         </>
     )

@@ -19,7 +19,7 @@ export const menus = [
         icon: "/images/tracker-i.svg"
     }
     , {
-        path: "/profile",
+        path: "/profile/records",
         name: "Профиль",
         icon: "/images/profile-i.svg"
     }

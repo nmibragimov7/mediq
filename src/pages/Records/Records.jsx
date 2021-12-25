@@ -1,8 +1,11 @@
-import React, {useState} from 'react';
-import BaseButton from "../../components/base/baseButton/baseButton";
-import BaseSelect from "../../components/base/BaseSelect/BaseSelect";
+import React, {useState} from 'react'
+import {useNavigate} from "react-router-dom"
+
+import BaseButton from "../../components/base/baseButton/baseButton"
+import BaseSelect from "../../components/base/BaseSelect/BaseSelect"
 
 const Records = () => {
+    const navigate = useNavigate()
     const [values, setValues] = useState({
         point: null,
         clinic: ""
@@ -24,8 +27,11 @@ const Records = () => {
         }]
     const onChangeHandler = (id, name) => {
         setValues(prev => ({...prev, [name]: id}))
-
     }
+    const routeHandler = () => {
+        navigate("/records/select-doctor")
+    }
+
     return (
         <div className={"h-100"}>
             <div className="row">
@@ -47,7 +53,7 @@ const Records = () => {
                     </div>
                 </div>
                 <div className="col-12 d-flex justify-content-center mt-3">
-                    <BaseButton width={35}>Далее</BaseButton>
+                    <BaseButton width={35} onClick={routeHandler}>Далее</BaseButton>
                 </div>
             </div>
         </div>

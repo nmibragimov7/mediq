@@ -1,0 +1,63 @@
+.doctor {
+  text-align: center;
+
+  &__item {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(4, minmax(0px, 200px));
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__input {
+    background: rgba(107, 119, 154, 0.05) !important;
+    border-radius: 10px !important;
+  }
+}
+
+.card {
+  height: 205px;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.0625);
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &Disabled {
+    background: rgba(16, 3, 67, 0.04);
+  }
+
+  &__image {
+    border-radius: 50%;
+
+    &Wrap {
+      position: relative;
+      width: 82px;
+      margin: 0 auto;
+    }
+  }
+
+  &Online {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3E64FF;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__subtitle {
+    color: #6B779A;
+  }
+}

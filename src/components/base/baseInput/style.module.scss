@@ -5,6 +5,10 @@
   border-radius: 50px;
   width: 100%;
 
+  &PaddingLeft {
+    padding: 19px 19px 19px 40px;
+  }
+
   &:focus,
   &:active {
     outline: none;
@@ -15,14 +19,20 @@
   }
 
   &__wrap {
-
+    position: relative;
   }
 
   &__label {
 
   }
 
-  &--error {
+  &__icon {
+    position: absolute;
+    left: 12px;
+    top: 35%;
+  }
+
+  &Error {
 
   }
 }

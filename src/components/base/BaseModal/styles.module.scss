@@ -9,7 +9,9 @@
   visibility: hidden;
   transform: scale(0.5);
   transition: 0.3s;
-  &__body{
+  overflow-y: hidden;
+
+  &__body {
     position: relative;
     z-index: 15;
     background: #fff;
@@ -21,6 +23,7 @@
     opacity: 1;
     visibility: visible;
     transform: scale(1);
+    overflow-y: hidden;
   }
 
   &__bg {

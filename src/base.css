@@ -21,11 +21,9 @@ html {
     margin: 0;
 }
 
-
-
 .h-100vh {
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .h-100 {
@@ -76,6 +74,7 @@ html {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    overflow-y: scroll;
 }
 
 .row {
