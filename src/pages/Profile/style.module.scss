@@ -1,0 +1,41 @@
+.profile {
+
+  &__card {
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 14px;
+  }
+}
+
+.tabs {
+  border-bottom: 1px solid #C5C5C5;
+  font-size: 24px;
+  margin: 40px 0 30px;
+
+  &__link {
+    padding: 12px 0;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+  }
+}
+
+.activeLink {
+  border-bottom: 1px solid #000;
+}
+
+.card {
+
+  &__title,
+  &__date {
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 14px;
+
+    &Gray {
+      color: #9190A5;
+    }
+  }
+}

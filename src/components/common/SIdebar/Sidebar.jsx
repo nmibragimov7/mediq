@@ -1,11 +1,12 @@
-import React from 'react';
-import {menus} from "../../../fixtures/sidebar";
+import React from 'react'
+import {NavLink} from "react-router-dom"
+
+import {menus} from "../../../fixtures/sidebar"
 import styles from "./siderbar.module.css"
-import {NavLink} from "react-router-dom";
 
 const Sidebar = () => {
     const isActiveLink = ({isActive}) => {
-        let classes = `py-3 pl-5 d-inline-flex align-items-center ${styles.menu__link} `
+        let classes = `${styles.menu__link} `
         if (isActive) {
             classes += styles.activeLink
         }
@@ -22,12 +23,14 @@ const Sidebar = () => {
                         <NavLink key={el.path}
                                  to={el.path}
                                  className={isActiveLink}>
-                            <span className={styles.menu__link__img}>
+                            <div className="py-3 pl-5 d-inline-flex align-items-center">
+                                <span className={styles.menu__link__img}>
                                 <img src={el.icon} alt=""/>
-                            </span>
-                            <span className={"ml-5"}>
-                            {el.name}
-                        </span>
+                                </span>
+                                    <span className={"ml-5"}>
+                                    {el.name}
+                                </span>
+                            </div>
                         </NavLink>
                     )
                 })}

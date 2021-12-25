@@ -3,7 +3,6 @@
     flex-basis: 20%;
 }
 
-
 .menu {
 }
 
@@ -19,6 +18,7 @@
 .menu__link:not(.activeLink):hover {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 32px 0 0 32px;
+    z-index: 10;
 }
 
 .activeLink {
@@ -26,20 +26,47 @@
     border-radius: 32px 0 0 32px;
 }
 
-.activeLink::after {
+.activeLink::after,
+.activeLink::before {
     content: "";
     position: absolute;
+    background: #E5E5E5;
     right: 0;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.activeLink::after {
     bottom: 100%;
 }
 
 .activeLink::before {
+    top: 100%;
+}
+
+.activeLink div {
+    position: relative;
+    width: 100%;
+    right: 0;
+}
+
+.activeLink div::after,
+.activeLink div::before {
     content: "";
     position: absolute;
+    background: #fff;
     right: 0;
-    background-color: #fff;
+    width: 30px;
+    height: 30px;
+}
+
+.activeLink div::after {
+    bottom: 100%;
+}
+
+.activeLink div::before {
     top: 100%;
 }
 

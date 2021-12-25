@@ -16,6 +16,7 @@ const BaseSelect = ({
         placeholder = option.value
     }
     const onSelectHandler = (option) => {
+        toggle()
         onSelect(option.id, name, option)
     }
     const toggle = () => setIsShow(prev => !prev)

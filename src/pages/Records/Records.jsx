@@ -8,9 +8,9 @@ const Records = () => {
         clinic: ""
     })
     const options = [{
-        id: 1,
-        value: "First Point"
-    },
+            id: 1,
+            value: "First Point"
+        },
         {
             id: 2,
             value: "Second Point"
