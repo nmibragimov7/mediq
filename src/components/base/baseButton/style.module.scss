@@ -1,0 +1,17 @@
+.button {
+  background: #6A35F7;
+  color: #fff;
+  padding: 17px;
+  border: none;
+  border-radius: 100px;
+  width: 100%;
+  cursor: pointer;
+  &__link {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  &__wrap {
+
+  }
+}

@@ -1,0 +1,22 @@
+.main {
+  background: url("../../assets/images/main.png") no-repeat 95% 55% / 45%, url("../../assets/images/element.svg") no-repeat 0.5% 30% rgba(115, 115, 115, 0.2);
+
+  &__item {
+    flex-basis: 23%;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.logoWrap {
+  flex-basis: 20%;
+}

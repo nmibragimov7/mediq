@@ -9,5 +9,9 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer)
 
 
+store.subscribe(() => {
+    const user = store.getState().users.user
+    localStorage.setItem("user", JSON.stringify(user))
+})
 
 export default store

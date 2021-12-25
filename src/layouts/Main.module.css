@@ -1,0 +1,11 @@
+.layout {
+    background: rgba(115, 115, 115, 0.2);
+}
+
+
+.layout__pages {
+    background-color: #fff;
+    box-shadow: 0 4px 48px rgba(0, 0, 0, 0.02);
+    border-radius: 48px;
+    position: relative;
+}

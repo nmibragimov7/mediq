@@ -1,0 +1,28 @@
+.input {
+  padding: 19px;
+  background: #fff;
+  border: 1px solid #E0E0E0;
+  border-radius: 50px;
+  width: 100%;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #9D9D9D;
+  }
+
+  &__wrap {
+
+  }
+
+  &__label {
+
+  }
+
+  &--error {
+
+  }
+}

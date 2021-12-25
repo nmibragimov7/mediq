@@ -1,0 +1,69 @@
+.select {
+  position: relative;
+  &__bg{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__input {
+    position: relative;
+    z-index: 3;
+    background: #fff;
+    & > input {
+      border: 1px solid #E0E0E0;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      background: url("./arrow-down.svg") no-repeat 95% center /15px;
+
+      &::placeholder {
+        color: #000000;
+        font-weight: 500;
+      }
+    }
+
+    &_closed {
+      & > input {
+        background-image: url("./arrow-up.svg");
+        border: 1px solid #4155c2;
+      }
+    }
+  }
+
+  &__body {
+    z-index: 5;
+    background: #FFFFFF;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    &_open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__option {
+    cursor: pointer;
+
+    &:hover {
+      background: #EBE8FF;
+    }
+
+    &_active {
+      background: #EBE8FF;
+    }
+
+  }
+
+}

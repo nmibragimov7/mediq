@@ -1,0 +1,54 @@
+
+.sidebar__logoWrap {
+    flex-basis: 20%;
+}
+
+
+.menu {
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #6A35F7;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+}
+
+
+.menu__link:not(.activeLink):hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 32px 0 0 32px;
+}
+
+.activeLink {
+    background: #FFFFFF;
+    border-radius: 32px 0 0 32px;
+}
+
+.activeLink::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    bottom: 100%;
+}
+
+.activeLink::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    top: 100%;
+}
+
+.menu__link__img {
+    width: 20px;
+}
+
+.menu__link__img img {
+    width: 100%;
+}
+
+

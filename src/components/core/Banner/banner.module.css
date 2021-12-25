@@ -1,0 +1,18 @@
+.banner {
+    background: linear-gradient(72.59deg, #6A35F7 0%, #926AFD 100%);
+    border-radius: 48px;
+    color: #fff;
+    min-height: 200px;
+}
+
+.title{
+    font-size: 34px;
+    line-height: 46px;
+}
+
+.subscribes_btn{
+    font-size: 24px;
+    max-width: 200px;
+    padding-left: 0 !important;
+    text-align: left;
+}
