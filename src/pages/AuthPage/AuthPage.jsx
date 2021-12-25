@@ -1,7 +1,7 @@
 import styles from "./style.module.scss"
-import BaseInput from "../../components/base/baseInput/baseInput";
+import BaseInput from "../../components/base/BaseInput/BaseInput";
 import {useState} from "react";
-import BaseButton from "../../components/base/baseButton/baseButton";
+import BaseButton from "../../components/base/BaseButton/BaseButton";
 import {useDispatch} from "react-redux";
 import {userAuthorizate} from "../../store/auth/actions";
 

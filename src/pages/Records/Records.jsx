@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {useNavigate} from "react-router-dom"
 
-import BaseButton from "../../components/base/baseButton/baseButton"
+import BaseButton from "../../components/base/BaseButton/BaseButton"
 import BaseSelect from "../../components/base/BaseSelect/BaseSelect"
 
 const Records = () => {
@@ -39,12 +39,12 @@ const Records = () => {
                     <BaseSelect name={"point"}
                                 value={values.point}
                                 onSelect={onChangeHandler} placeholder={"Выберите город"}
-                                options={options} classes={"mb-2"}/>
+                                options={options} addClass={"mb-2"}/>
                     {
                         values.point && <BaseSelect name={"clinic"}
                                                     value={values.clinic}
                                                     onSelect={onChangeHandler} placeholder={"Выберите Клинику"}
-                                                    options={options} classes={"mb-2"}/>
+                                                    options={options} addClass={"mb-2"}/>
                     }
                 </div>
                 <div className="col-6">

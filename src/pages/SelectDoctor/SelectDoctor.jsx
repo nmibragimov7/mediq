@@ -1,9 +1,9 @@
-import {useEffect, useState} from "react"
+import {useState} from "react"
 import {useSelector} from "react-redux"
 import {useNavigate} from "react-router-dom"
 
 import styles from "./style.module.scss"
-import BaseInput from "../../components/base/baseInput/baseInput"
+import BaseInput from "../../components/base/BaseInput/BaseInput"
 import {doctors} from "../../store/getters/getters"
 
 const SelectDoctor = () => {
@@ -16,7 +16,6 @@ const SelectDoctor = () => {
     }
     const items = useSelector(doctors)
     const routeHandler = (item) => {
-        console.log(item)
         if(item.available) {
             navigate("/records/new-record")
         }

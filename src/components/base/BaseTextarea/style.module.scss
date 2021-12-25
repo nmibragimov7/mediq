@@ -1,0 +1,33 @@
+.textarea {
+  background: rgba(107, 119, 154, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #E0E0E0;
+
+  &::-webkit-scrollbar {
+    //height: 8px;
+    width: 8px;
+    background-color: #E0E0E0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    //height: 8px;
+    width: 8px;
+    border-radius: 5px;
+    background-color: #6B779A;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #6B779A;
+  }
+
+  &__label {
+    color: #6B779A;
+    font-size: 14px;
+  }
+}

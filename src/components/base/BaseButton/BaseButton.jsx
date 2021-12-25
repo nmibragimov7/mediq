@@ -1,9 +1,10 @@
 import styles from "./style.module.scss"
 
 export default function BaseButton({
-                                       width = 100, type
-        = "primary",
-                                       classes = "", ...props
+                                       width = 100,
+                                       type = "primary",
+                                       classes = "",
+                                       ...props
                                    }) {
     const btnsCls = [styles.button, classes]
     if (type === 'link') {

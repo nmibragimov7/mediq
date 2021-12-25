@@ -7,8 +7,9 @@ const BaseSelect = ({
                         placeholder = "",
                         width = 100,
                         value,
+                        label = "",
                         onSelect = () => ({}),
-                        classes = ""
+                        addClass = ""
                     }) => {
     const option = options.find(o => o.id === value)
     const [isShow, setIsShow] = useState()
@@ -25,13 +26,27 @@ const BaseSelect = ({
         bodyCls.push(styles.select__body_open)
     }
     const inputCls = [styles.select__input]
+    let classes = ["p-3", styles.select__inputItem, addClass]
     if (isShow) {
-        inputCls.push(styles.select__input_closed)
+        classes.push(styles.select__inputClosed)
     }
+
     return (
-        <div className={`${styles.select} ${classes}`} style={{width: width + "%"}}>
+        <div className={`${styles.select}`} style={{width: width + "%"}}>
             <div className={inputCls.join(" ")}>
-                <input type="text" className={"p-3"} onClick={toggle} placeholder={placeholder}/>
+                {label &&
+                    <label
+                        htmlFor={name}
+                        className={styles.select__label}
+                    >{label}</label>
+                }
+                <input
+                    id={name}
+                    type="text"
+                    className={classes.join(" ")}
+                    onClick={toggle}
+                    placeholder={placeholder}
+                    readOnly/>
             </div>
             <div className={bodyCls.join(" ")}>
                 {options.map(el => {

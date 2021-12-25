@@ -1,0 +1,26 @@
+.radio {
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__label {
+    color: #6B779A;
+    font-size: 14px;
+  }
+
+  &__item {
+    border: 1px solid rgba(107, 119, 154, 0.1);
+    border-radius: 10px;
+    padding: 13px 30px;
+    color: #6B779A;
+  }
+
+  &__itemActive {
+    border: 1px solid #6A35F7;
+    background: #6A35F7;
+    color: #fff;
+  }
+}

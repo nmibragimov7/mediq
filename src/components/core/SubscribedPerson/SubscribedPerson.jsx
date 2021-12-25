@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import BaseButton from "../../base/baseButton/baseButton";
+import BaseButton from "../../base/BaseButton/BaseButton";
 import s from "./style.module.scss"
 import BaseModal from "../../base/BaseModal/BaseModal";
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./style.module.scss"
-import BaseButton from "../../base/baseButton/baseButton";
+import BaseButton from "../../base/BaseButton/BaseButton";
 
 const SelectSubscribe = ({onSelect}) => {
     return (

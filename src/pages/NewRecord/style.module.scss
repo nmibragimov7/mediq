@@ -1,0 +1,38 @@
+.record {
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: #222B45;
+    font-weight: 600;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  &__button {
+    border-radius: 5px !important;
+  }
+
+  &__input,
+  &__select {
+    border-radius: 10px !important;
+  }
+
+  &__input {
+    background: rgba(107, 119, 154, 0.05) !important;
+  }
+
+  &__select {
+    background-color: rgba(107, 119, 154, 0.05) !important;
+  }
+}

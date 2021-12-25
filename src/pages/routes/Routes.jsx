@@ -8,6 +8,7 @@ import Profile from "../Profile/Profile"
 import Analyzes from "../Analyzes/Analyzes"
 import RecordDetail from "../RecordDetail/RecordDetail"
 import SelectDoctor from "../SelectDoctor/SelectDoctor"
+import NewRecord from "../NewRecord/NewRecord"
 
 const AppRoutes = () => {
     return (
@@ -15,7 +16,7 @@ const AppRoutes = () => {
             <Route exact path={"/"} element={<Subscribes/>}/>
             <Route exact path={"/records"} element={<Records/>}/>
             <Route exact path={"/records/select-doctor"} element={<SelectDoctor/>}/>
-            <Route exact path={"/records/new-record"} element={<Records/>}/>
+            <Route exact path={"/records/new-record"} element={<NewRecord/>}/>
             <Route exact path={"/tracker"} element={<Tracker/>}/>
             <Route exact path={"/profile/records"} element={<Profile/>}/>
             <Route path={"/profile/records/:id"} element={<RecordDetail/>}/>
