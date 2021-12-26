@@ -6,6 +6,7 @@ import BaseSelect from "../../components/base/BaseSelect/BaseSelect"
 import BaseTextarea from "../../components/base/BaseTextarea/BaseTextarea";
 import BaseRadio from "../../components/base/BaseRadio/BaseRadio";
 import BaseButton from "../../components/base/BaseButton/BaseButton";
+import BaseDatePicker from "../../components/base/BaseDatePicker/BaseDatePicker";
 
 const NewRecord = () => {
     const [form, setForm] = useState({
@@ -86,13 +87,20 @@ const NewRecord = () => {
     const onSubmit = (e) => {
         e.preventDefault()
     }
+    const handleDateChange = (date) => {
+        console.log("change", date)
+        setForm(form => ({...form, date: date}))
+    }
 
     return (
         <>
             <div className={styles.record}>
                 <p className={`${styles.record__title} mb-4`}>Новая запись</p>
                 <div className={styles.record__form} style={{marginBottom: "85px"}}>
-                    <div>Datepicker</div>
+                    <div>
+                        <BaseDatePicker date={form.date}
+                                        onChange={handleDateChange}/>
+                    </div>
                     <div>
                         <p className={`${styles.record__subtitle} mb-3`}>Свободное время</p>
                         <BaseRadio

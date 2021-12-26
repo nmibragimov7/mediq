@@ -16,6 +16,13 @@
     border-radius: 10px;
     padding: 13px 30px;
     color: #6B779A;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #6A35F7;
+      background: #6A35F7;
+      color: #fff;
+    }
   }
 
   &__itemActive {

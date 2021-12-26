@@ -18,9 +18,8 @@ const AppRoutes = () => {
             <Route exact path={"/records/select-doctor"} element={<SelectDoctor/>}/>
             <Route exact path={"/records/new-record"} element={<NewRecord/>}/>
             <Route exact path={"/tracker"} element={<Tracker/>}/>
-            <Route exact path={"/profile/records"} element={<Profile/>}/>
+            <Route path={"/profile"} element={<Profile/>}/>
             <Route path={"/profile/records/:id"} element={<RecordDetail/>}/>
-            <Route exact path={"/profile/history"} element={<Profile/>}/>
             <Route exact path={"/analyzes"} element={<Analyzes/>}/>
             <Route path={"*"} element={<Navigate to={"/"}/>}/>
         </Routes>

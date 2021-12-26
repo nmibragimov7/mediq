@@ -17,9 +17,8 @@ export const menus = [
         path: "/tracker",
         name: "Трекер",
         icon: "/images/tracker-i.svg"
-    }
-    , {
-        path: "/profile/records",
+    }, {
+        path: "/profile",
         name: "Профиль",
         icon: "/images/profile-i.svg"
     }

@@ -23,13 +23,9 @@ const BaseRadio = ({
             <div key={name} style={{width: width + "%"}} className={classes.join(" ")}>
                 {options.map((el, index) => {
                     return (
-                        <>
-                            <label
-                                key={index}
-                                htmlFor={el.value}
-                            >
+                        <div key={index}>
+                            <label htmlFor={el.value}>
                                 <input
-                                    key={index + 1}
                                     id={el.value}
                                     name={name}
                                     type="radio"
@@ -37,7 +33,7 @@ const BaseRadio = ({
                                     {...props}
                                     hidden
                                 />
-                                <div key={index + 2} className={
+                                <div className={
                                     `${styles.radio__item} 
                                     d-flex 
                                     justify-content-center 
@@ -45,7 +41,7 @@ const BaseRadio = ({
                                     ${value === el.value && styles.radio__itemActive}
                                     `}>{el.value}</div>
                             </label>
-                        </>
+                        </div>
                     )
                 })}
             </div>

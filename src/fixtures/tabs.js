@@ -1,10 +1,10 @@
 export const tabs = [
     {
         name: 'Мои записи',
-        hash: 'records'
+        hash: '#records'
     },
     {
         name: 'История',
-        hash: 'history'
+        hash: '#history'
     }
 ]

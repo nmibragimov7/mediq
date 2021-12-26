@@ -14,10 +14,11 @@ const Profile = () => {
     const location = useLocation()
     const {id} = useParams()
     useEffect(() => {
-        setActiveTab(location.pathname.split("/")[2])
-    }, [])
+        setActiveTab(location.hash)
+        !location.hash && setActiveTab("#records")
+    }, [location.pathname])
     const switchTab = (hash) => {
-        navigate(`/profile/${hash}`)
+        navigate(`/profile${hash}`)
         setActiveTab(hash)
     }
     const cardHandler = (redordId) => {
@@ -43,7 +44,7 @@ const Profile = () => {
                             }
                         </div>
                         {
-                            activeTab === "records" && (
+                            (activeTab === "#records") && (
                                 <>
                                     {
                                         items.map(record => (
@@ -62,6 +63,13 @@ const Profile = () => {
                                             </div>
                                         ))
                                     }
+                                </>
+                            )
+                        }
+                        {
+                            (activeTab === "#history") && (
+                                <>
+                                    History
                                 </>
                             )
                         }
