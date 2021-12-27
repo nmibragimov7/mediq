@@ -99,6 +99,7 @@ const NewRecord = () => {
                 <div className={styles.record__form} style={{marginBottom: "85px"}}>
                     <div>
                         <BaseDatePicker date={form.date}
+                                        width={70}
                                         onChange={handleDateChange}/>
                     </div>
                     <div>

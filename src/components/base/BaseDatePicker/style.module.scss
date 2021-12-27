@@ -1,25 +1,35 @@
 @import 'node_modules/react-datepicker/src/stylesheets/datepicker.scss';
 
-.react-datepicker__month-container {
-  background-color: #081833;
-  color: #969eac;
-  font-size: 1rem;
-  font-family: 'Mulish';
+.datepicker {
+  &__input {
+    padding: 10px 10px 10px 40px;
+    background: #fff url("../../../assets/images/calendar.svg") no-repeat 10px center;
+    border: 1px solid #6A35F7;
+    border-radius: 5px;
+    width: 100%;
 
-  .react-datepicker__month {
-    padding: 1rem 0;
-  }
+    &:focus,
+    &:active {
+      outline: none;
+    }
 
-  .react-datepicker__month-text {
-    display: inline-block;
-    width: 5rem;
-    margin: 0.5rem;
-    font-size: 1rem;
-    padding: 0.2rem;
-    &:hover {
-      background-color: #534cea;
+    &::placeholder {
+      color: #9D9D9D;
     }
   }
 
+  &__calendar {
+    background: #fff;
+    //padding: 20px;
+    border-radius: 8px;
+  }
 
+  &__day {
+    font-size: 12px;
+    color: #A9ABBD;
+    margin: 8px 8px;
+  }
 }
+
+
+
