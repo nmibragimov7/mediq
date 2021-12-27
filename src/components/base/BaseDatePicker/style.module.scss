@@ -20,14 +20,44 @@
 
   &__calendar {
     background: #fff;
-    //padding: 20px;
     border-radius: 8px;
+    border: none;
+    filter: drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.05));
   }
 
   &__day {
     font-size: 12px;
     color: #A9ABBD;
     margin: 8px 8px;
+  }
+
+  &__header {
+    padding: 20px;
+    background: #fff;
+    color: #111111;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &__weeks {
+    padding: 20px;
+    background: #fff;
+    color: #A9ABBD;
+    font-size: 12px;
+  }
+
+  &__prev,
+  &__next {
+    width: 8px;
+    height: 12px;
+  }
+
+  &__prev {
+    background: url("../../../assets/images/prev.svg") no-repeat center center;
+  }
+
+  &__next {
+    background: url("../../../assets/images/next.svg") no-repeat center center;
   }
 }
 
