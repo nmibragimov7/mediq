@@ -45,16 +45,13 @@ const BaseDatePicker = ({date, width = 100, ...props}) => {
                     return styles.datepicker__day
                 }}
                 dateFormat="dd/MM/yyyy"
-                showMonthYearPicker={false}
-                locale={"Ru"}
+                formatWeekDay={() => null}
                 renderCustomHeader={({date,
-                        changeYear,
-                        changeMonth,
-                        decreaseMonth,
-                        increaseMonth,
-                        prevMonthButtonDisabled,
-                        nextMonthButtonDisabled,
-                    }) => {
+                                         decreaseMonth,
+                                         increaseMonth,
+                                         prevMonthButtonDisabled,
+                                         nextMonthButtonDisabled,
+                                     }) => {
                     return (
                         <div>
                             <div className={`${styles.datepicker__header} d-flex justify-content-between align-items-center`}>
@@ -62,7 +59,7 @@ const BaseDatePicker = ({date, width = 100, ...props}) => {
                                 <p>{getMonth(date)} {getYear(date)}</p>
                                 <div className={styles.datepicker__next} onClick={increaseMonth} disabled={nextMonthButtonDisabled}></div>
                             </div>
-                            <div  className={`${styles.datepicker__weeks} d-flex justify-content-between align-items-center`}>
+                            <div className={`${styles.datepicker__weeks} d-flex justify-content-between align-items-center`}>
                                 {
                                     weeks.map(week => {
                                         return (
@@ -81,3 +78,4 @@ const BaseDatePicker = ({date, width = 100, ...props}) => {
 }
 
 export default BaseDatePicker
+

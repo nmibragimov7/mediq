@@ -2,11 +2,12 @@
 
 .datepicker {
   &__input {
-    padding: 10px 10px 10px 40px;
+    padding: 15px 10px 15px 40px;
     background: #fff url("../../../assets/images/calendar.svg") no-repeat 10px center;
     border: 1px solid #6A35F7;
     border-radius: 5px;
     width: 100%;
+    cursor: pointer;
 
     &:focus,
     &:active {
@@ -28,7 +29,11 @@
   &__day {
     font-size: 12px;
     color: #A9ABBD;
-    margin: 8px 8px;
+    margin: 5px 9px;
+
+    &.react-datepicker__day--selected {
+      background: red;
+    }
   }
 
   &__header {
@@ -37,6 +42,8 @@
     color: #111111;
     font-weight: 600;
     font-size: 14px;
+    margin-top: -18px;
+    width: 340px;
   }
 
   &__weeks {
@@ -44,6 +51,7 @@
     background: #fff;
     color: #A9ABBD;
     font-size: 12px;
+    margin-bottom: -17px;
   }
 
   &__prev,
