@@ -13,8 +13,8 @@ const Banner = () => {
                     </BaseButton>
                 </div>
             </div>
-            <div>
-                58%
+            <div className={styles.bannerCircle}>
+                <img src="images/circle-progress.svg" alt=""/>
             </div>
         </div>
     );

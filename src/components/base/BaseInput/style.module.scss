@@ -4,7 +4,11 @@
   border: 1px solid #E0E0E0;
   border-radius: 50px;
   width: 100%;
-
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
   &PaddingLeft {
     padding: 19px 19px 19px 40px;
   }

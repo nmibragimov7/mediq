@@ -1,0 +1,43 @@
+.banner {
+  position: relative;
+
+  &__img {
+    position: relative;
+    border-radius: 48px;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      left: 0;
+      top: 0;
+      right: 0;
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &__body {
+    position: absolute;
+    color: #fff;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    bottom: 0;
+  }
+
+  &__footer {
+    font-weight: 500;
+    font-size: 18px;
+    background: rgba(60, 17, 134, 0.3);
+    backdrop-filter: blur(36px);
+    border-radius: 24px;
+    min-height: 160px;
+  }
+}
