@@ -4,10 +4,11 @@ export default function BaseButton({
                                        width = 100,
                                        type = "primary",
                                        classes = "",
+                                       disabled = false,
                                        ...props
                                    }) {
     const btnsCls = [styles.button, classes]
-    if (type === 'link') {
+    if (type === "link") {
         btnsCls.push(styles.button__link)
     }
     return (
@@ -18,6 +19,7 @@ export default function BaseButton({
             >
                 <button
                     className={btnsCls.join(" ")}
+                    disabled={disabled}
                     {...props}
                 >
                     {props.children}

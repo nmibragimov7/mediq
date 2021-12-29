@@ -2,14 +2,24 @@ import React from "react";
 import s from "./style.module.scss"
 
 const BaseCheckbox = ({
-                          label, value, name = "", width = 100
+                          label, checked,
+                          name = "",
+                          width = 100,
+                          ...props
                       }) => {
+        const clsCheckbox = [s.input]
+        if (checked) {
+            clsCheckbox.push(s.input__active)
+        }
         return (
             <div className={"d-flex align-items-center"} style={{width: width + "%"}}>
-                <div>
-                    <input type="checkbox" name={name} value={value}/>
-                </div>
-                <p className={`${s.label} ml-2`}>
+                <label className={s.input__wrap}>
+                    <input checked={checked} type="checkbox" name={name} {...props}/>
+                    <div className={clsCheckbox.join(" ")}>
+
+                    </div>
+                </label>
+                <p className={`${s.label} ml-3`}>
                     {label}
                 </p>
             </div>

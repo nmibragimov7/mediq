@@ -1,0 +1,21 @@
+.c {
+  box-shadow: 0 4px 15px rgba(215, 218, 222, 0.5);
+  border-radius: 28px;
+
+  &__color {
+    color: #50555F;
+    line-height: 20px;
+  }
+
+  &__btns {
+    box-shadow: 0 4px 24px rgba(60, 65, 88, 0.06);
+    border-radius: 20px;
+    min-height: 70px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
+}

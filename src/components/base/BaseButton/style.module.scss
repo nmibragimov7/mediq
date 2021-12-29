@@ -6,6 +6,11 @@
   border-radius: 100px;
   width: 100%;
   cursor: pointer;
+
+  &:disabled {
+    background: lighten(#6A35F7, 20)
+  }
+
   &__link {
     background-color: transparent;
     text-decoration: underline;

@@ -2,3 +2,20 @@
 .label {
   color: #A9ABBD;
 }
+
+.input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #E1E4EB;
+  border-radius: 3px;
+
+  &__wrap {
+    & > input {
+      display: none;
+    }
+  }
+
+  &__active {
+    background: url("./success-i.svg") no-repeat center 65% /70% #6A35F7;
+  }
+}
