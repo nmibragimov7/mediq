@@ -9,7 +9,7 @@ const BaseCheckbox = ({
                 <div>
                     <input type="checkbox" name={name} value={value}/>
                 </div>
-                <p className={s.label}>
+                <p className={`${s.label} ml-2`}>
                     {label}
                 </p>
             </div>
