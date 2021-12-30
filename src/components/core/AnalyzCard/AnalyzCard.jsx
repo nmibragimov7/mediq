@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./style.module.scss"
 
+// Карточка для анализа
 const AnalyzCard = () => {
     return (
         <div className={`${s.c} p-4 mb-3`}>

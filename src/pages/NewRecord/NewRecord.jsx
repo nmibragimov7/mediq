@@ -94,6 +94,7 @@ const NewRecord = () => {
     const handleChange = (e) => {
         setForm(form => ({...form, [e.target.name]: e.target.value}))
     }
+    // eslint-disable-next-line no-unused-vars
     const onSubmit = (e) => {
         e.preventDefault()
         if(!doctor) {
