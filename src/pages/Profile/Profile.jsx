@@ -16,7 +16,7 @@ const Profile = () => {
     useEffect(() => {
         setActiveTab(location.hash)
         !location.hash && setActiveTab("#records")
-    }, [location.pathname])
+    }, [location.hash])
     const switchTab = (hash) => {
         navigate(`/profile${hash}`)
         setActiveTab(hash)
