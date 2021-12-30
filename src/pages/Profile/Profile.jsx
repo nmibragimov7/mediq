@@ -69,7 +69,23 @@ const Profile = () => {
                         {
                             (activeTab === "#history") && (
                                 <>
-                                    History
+                                    {
+                                        items.map(record => (
+                                            <div key={record.id} className={`${styles.profile__card} mb-5`} onClick={cardHandler.bind(null, record.id)}>
+                                                <div className="d-flex justify-content-between align-content-center mb-3">
+                                                    <p className={styles.card__title}>{record.polyclinic}</p>
+                                                    <div>
+                                                        <span className={`${styles.card__date} ${styles.card__textGray}`}>Дата: {record.date}</span>
+                                                        <span className={`${styles.card__date} ${styles.card__textGray} ml-4`}>Время: {record.time}</span>
+                                                    </div>
+                                                </div>
+                                                <p className={`${styles.card__text} ${styles.card__textGray} mb-2`}>Услуга</p>
+                                                <p className={`${styles.card__text} mb-2`}>Прием: {record.service}</p>
+                                                <p className={`${styles.card__text} ${styles.card__textGray} mb-2`}>Причина обращения</p>
+                                                <p className={styles.card__text}>{record.reason}</p>
+                                            </div>
+                                        ))
+                                    }
                                 </>
                             )
                         }

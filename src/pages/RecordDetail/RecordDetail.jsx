@@ -10,11 +10,11 @@ const RecordDetail = () => {
     const {id} = useParams()
     const items = useSelector(records)
     useEffect(() => {
-        if(id) {
+        if (id) {
             const index = items.findIndex(item => item.id === parseInt(id))
             setRecord(items[index])
         }
-    }, [])
+    }, [id, items])
 
 
     return (
@@ -26,8 +26,10 @@ const RecordDetail = () => {
                             <div className="d-flex justify-content-between align-content-center mb-3">
                                 <p className={styles.card__title}>{record.polyclinic}</p>
                                 <div>
-                                    <span className={`${styles.card__date} ${styles.card__textGray}`}>Дата: {record.date}</span>
-                                    <span className={`${styles.card__date} ${styles.card__textGray} ml-4`}>Время: {record.time}</span>
+                                    <span
+                                        className={`${styles.card__date} ${styles.card__textGray}`}>Дата: {record.date}</span>
+                                    <span
+                                        className={`${styles.card__date} ${styles.card__textGray} ml-4`}>Время: {record.time}</span>
                                 </div>
                             </div>
                             <p className={`${styles.card__text} ${styles.card__textGray} mb-2`}>Услуга</p>

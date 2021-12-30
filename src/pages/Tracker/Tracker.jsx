@@ -5,10 +5,8 @@ import {
     Area,
     XAxis,
     YAxis,
-    CartesianGrid,
     Tooltip,
     BarChart,
-    Legend,
     Bar
 } from 'recharts'
 

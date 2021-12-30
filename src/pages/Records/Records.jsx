@@ -24,6 +24,7 @@ const Records = () => {
         point: null,
         clinic: ""
     })
+    // eslint-disable-next-line no-unused-vars
     const [map, setMap] = React.useState(null)
     const [activeCoordinates, setActiveCoordinates] = useState(center)
     const onLoad = React.useCallback(function callback(map) {

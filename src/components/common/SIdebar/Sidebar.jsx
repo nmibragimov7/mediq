@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom"
 import {menus} from "../../../fixtures/sidebar"
 import styles from "./siderbar.module.css"
 
+// боковое меню
 const Sidebar = () => {
     const isActiveLink = ({isActive}) => {
         let classes = `${styles.menu__link} `
@@ -13,7 +14,7 @@ const Sidebar = () => {
         return classes
     }
     return (
-        <div className={"d-flex flex-column h-100 py-5"}>
+        <div className={"d-flex flex-column h-100vh py-5"}>
             <div className={`${styles.sidebar__logoWrap} pl-4`}>
                 <img src="/images/logo.svg" alt=""/>
             </div>
