@@ -1,10 +1,12 @@
-import styles from "./style.module.scss"
-import BaseInput from "../../components/base/BaseInput/BaseInput";
-import {useState} from "react";
-import BaseButton from "../../components/base/BaseButton/BaseButton";
-import {useDispatch} from "react-redux";
-import {userAuthorizate} from "../../store/auth/actions";
+import {useState} from "react"
+import {useDispatch} from "react-redux"
 
+import styles from "./style.module.scss"
+import BaseInput from "../../components/base/BaseInput/BaseInput"
+import BaseButton from "../../components/base/BaseButton/BaseButton"
+import {userAuthorizate} from "../../store/auth/actions"
+
+// Главная страница авторизации
 export default function AuthPage() {
     const [form, setForm] = useState({
         login: "",

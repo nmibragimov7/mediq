@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
+
 import s from "./styles.module.scss"
 
+// Переиспользуемый UI компонент для модалки
 const BaseModal = ({children, onClose, isShowed}) => {
     const cls = [s.modal]
     if (isShowed) {

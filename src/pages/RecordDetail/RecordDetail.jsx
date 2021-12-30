@@ -5,6 +5,7 @@ import {useSelector} from "react-redux"
 import styles from "./style.module.scss"
 import {records} from "../../store/getters/getters"
 
+// Страница детализации записи /profile/records/:id
 const RecordDetail = () => {
     const [record, setRecord] = useState(null)
     const {id} = useParams()

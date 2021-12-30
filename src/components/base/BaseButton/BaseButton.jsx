@@ -1,5 +1,6 @@
 import styles from "./style.module.scss"
 
+// Переиспользуемый UI компонент для кнопки
 export default function BaseButton({
                                        width = 100,
                                        type = "primary",

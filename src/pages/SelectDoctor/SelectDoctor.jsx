@@ -5,8 +5,9 @@ import {useNavigate} from "react-router-dom"
 import styles from "./style.module.scss"
 import BaseInput from "../../components/base/BaseInput/BaseInput"
 import {doctors} from "../../store/getters/getters"
-import {setSelectedDoctor} from "../../store/doctors/actions";
+import {setSelectedDoctor} from "../../store/doctors/actions"
 
+// Страница выбора врача
 const SelectDoctor = () => {
     const dispatch = useDispatch()
     const [form, setForm] = useState({

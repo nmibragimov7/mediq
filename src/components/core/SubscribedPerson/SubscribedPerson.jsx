@@ -1,9 +1,11 @@
-import React, {useState} from "react";
-import BaseButton from "../../base/BaseButton/BaseButton";
-import s from "./style.module.scss"
-import BaseModal from "../../base/BaseModal/BaseModal";
-import SubscribeCard from "../SubscribeCard/SubscribeCard";
+import React, {useState} from "react"
 
+import BaseButton from "../../base/BaseButton/BaseButton"
+import s from "./style.module.scss"
+import BaseModal from "../../base/BaseModal/BaseModal"
+import SubscribeCard from "../SubscribeCard/SubscribeCard"
+
+// Компонент для отображения выбранной подписки
 const SubscribedPerson = ({unSubscribe}) => {
     const [isMShowed, setIsMShowed] = useState(false)
     const toggleModal = () => {

@@ -1,6 +1,8 @@
-import React from "react";
+import React from "react"
+
 import s from "./style.module.scss"
 
+// Переиспользуемый UI компонент для чекбокса
 const BaseCheckbox = ({
                           label, checked,
                           name = "",

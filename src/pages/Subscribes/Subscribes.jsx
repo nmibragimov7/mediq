@@ -5,7 +5,7 @@ import SubscribedPerson from "../../components/core/SubscribedPerson/SubscribedP
 import SubscribePay from "../../components/core/SelectSubscribe/SubscribePay";
 import {toast} from 'react-toastify';
 
-// Главная страница
+// Страница Подиски
 const Subscribes = () => {
     const [isJoined, setIsJoined] = useState(false)
     const [activeStep, setActiveStep] = useState(0)

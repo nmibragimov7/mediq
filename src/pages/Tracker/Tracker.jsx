@@ -12,6 +12,7 @@ import {
 
 import styles from "./style.module.scss"
 
+// Трекер страница
 const Tracker = () => {
     const steps = [
         {

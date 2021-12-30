@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'
+
 import styles from "./style.module.scss"
 
+// Переиспользуемый UI компонент для выпадающего селекта
 const BaseSelect = ({
                         options,
                         name = "",

@@ -4,6 +4,7 @@ import "react-datepicker/dist/react-datepicker.css"
 
 import styles from "./style.module.scss"
 
+// Переиспользуемый UI компонент для дейтпикера
 const BaseDatePicker = ({date, width = 100, ...props}) => {
     const months = [
         "Январь",

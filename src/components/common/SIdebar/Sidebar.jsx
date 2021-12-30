@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom"
 import {menus} from "../../../fixtures/sidebar"
 import styles from "./siderbar.module.css"
 
-// боковое меню
+// Боковое меню
 const Sidebar = () => {
     const isActiveLink = ({isActive}) => {
         let classes = `${styles.menu__link} `

@@ -1,7 +1,9 @@
-import React from "react";
-import SubscribeCard from "../SubscribeCard/SubscribeCard";
-import BaseButton from "../../base/BaseButton/BaseButton";
+import React from "react"
 
+import SubscribeCard from "../SubscribeCard/SubscribeCard"
+import BaseButton from "../../base/BaseButton/BaseButton"
+
+// Компонент описания оплаты
 const SubscribePayInfo = ({next}) => {
     return (
         <div>

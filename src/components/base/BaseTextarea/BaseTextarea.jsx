@@ -1,5 +1,6 @@
 import styles from "./style.module.scss"
 
+// Переиспользуемый UI компонент для ввода данных
 const BaseTextarea = ({
                           name,
                           label = "",

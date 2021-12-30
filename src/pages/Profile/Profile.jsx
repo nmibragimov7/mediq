@@ -7,6 +7,7 @@ import styles from "./style.module.scss"
 import {tabs} from "../../fixtures/tabs"
 import {records} from "../../store/getters/getters";
 
+// Страница профиля
 const Profile = () => {
     const [activeTab, setActiveTab] = useState()
     const items = useSelector(records)

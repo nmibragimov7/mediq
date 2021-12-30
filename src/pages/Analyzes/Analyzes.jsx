@@ -1,6 +1,6 @@
 import React from "react"
-import AnalyzCard from "../../components/core/AnalyzCard/AnalyzCard";
 
+import AnalyzCard from "../../components/core/AnalyzCard/AnalyzCard"
 
 // Страница анализы
 const Analyzes = () => {

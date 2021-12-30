@@ -1,5 +1,6 @@
 import styles from "./style.module.scss"
 
+// Переиспользуемый UI компонент для ввода данных
 export default function BaseInput({
                                       name,
                                       label = "",

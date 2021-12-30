@@ -1,7 +1,9 @@
-import React from 'react';
-import styles from "./banner.module.css"
-import BaseButton from "../../base/BaseButton/BaseButton";
+import React from 'react'
 
+import styles from "./banner.module.css"
+import BaseButton from "../../base/BaseButton/BaseButton"
+
+// Баннер
 const Banner = () => {
     return (
         <div className={`d-flex justify-content-between align-items-center p-5 ${styles.banner}`}>

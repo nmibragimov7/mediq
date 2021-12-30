@@ -1,6 +1,8 @@
-import React from "react";
-import s from "./subscribe_card.module.scss";
+import React from "react"
 
+import s from "./subscribe_card.module.scss"
+
+// Карточка подписки
 const SubscribeCard = () => {
     return (
         <div className={s.banner}>

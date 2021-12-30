@@ -2,6 +2,7 @@ import React from "react"
 
 import styles from "./style.module.scss"
 
+// Переиспользуемый UI компонент для радиобаттона
 const BaseRadio = ({
                        name,
                        options,

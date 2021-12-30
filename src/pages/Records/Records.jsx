@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import {useNavigate} from "react-router-dom"
-import {GoogleMap, Marker, useJsApiLoader} from "@react-google-maps/api";
+import {GoogleMap, Marker, useJsApiLoader} from "@react-google-maps/api"
 
 import BaseButton from "../../components/base/BaseButton/BaseButton"
 import BaseSelect from "../../components/base/BaseSelect/BaseSelect"
@@ -14,6 +14,8 @@ const center = {
     lng: 76.889709,
     zoom: 15
 };
+
+// Страница записи, выбор медфицинского центра по карте
 const Records = () => {
     const navigate = useNavigate()
     const {isLoaded} = useJsApiLoader({

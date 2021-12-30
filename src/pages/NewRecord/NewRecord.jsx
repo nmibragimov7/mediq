@@ -13,6 +13,7 @@ import BaseDatePicker from "../../components/base/BaseDatePicker/BaseDatePicker"
 import {selectedDoctor} from "../../store/getters/getters"
 import {addRecord} from "../../store/records/actions"
 
+// Страница ввода данных для новой записи к врачу
 const NewRecord = () => {
     const doctor = useSelector(selectedDoctor)
     const dispatch = useDispatch()
@@ -95,7 +96,6 @@ const NewRecord = () => {
     const handleChange = (e) => {
         setForm(form => ({...form, [e.target.name]: e.target.value}))
     }
-    // eslint-disable-next-line no-unused-vars
     const onSubmit = (e) => {
         e.preventDefault()
         if(!doctor) {
@@ -109,7 +109,7 @@ const NewRecord = () => {
             polyclinic: "Городская поликлиника №2",
             service: doctor.position,
             reason: form.reason,
-            date: form.date.toString(),
+            date: `${new Date(form.date).getDate()}-${new Date(form.date).getMonth() + 1}-${new Date(form.date).getFullYear()}`,
             time: form.time,
             doctor: doctor.name,
             department: "Терапевтическое",

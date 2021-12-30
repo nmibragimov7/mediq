@@ -1,8 +1,10 @@
-import React, {useState} from "react";
-import styles from "./style.module.scss"
-import SubscribeDescription from "./SubscribeDescription";
-import SubscribePayInfo from "./SubscribePayInfo";
+import React, {useState} from "react"
 
+import styles from "./style.module.scss"
+import SubscribeDescription from "./SubscribeDescription"
+import SubscribePayInfo from "./SubscribePayInfo"
+
+// Компонент для выбора подписки
 const SelectSubscribe = ({onSelect}) => {
     const [activeStep, setActiveStep] = useState(0)
     const next = () => {

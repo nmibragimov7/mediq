@@ -1,7 +1,9 @@
-import React from "react";
-import styles from "./style.module.scss";
-import BaseButton from "../../base/BaseButton/BaseButton";
+import React from "react"
 
+import styles from "./style.module.scss"
+import BaseButton from "../../base/BaseButton/BaseButton"
+
+// Компонент опасания подписки
 const SubscribeDescription = ({onSelect}) => {
     return (
         <>

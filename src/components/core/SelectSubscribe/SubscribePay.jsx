@@ -1,8 +1,10 @@
-import React, {useState} from "react";
-import BaseInput from "../../base/BaseInput/BaseInput";
-import BaseButton from "../../base/BaseButton/BaseButton";
-import BaseCheckbox from "../../base/BaseCheckbox/BaseCheckbox";
+import React, {useState} from "react"
 
+import BaseInput from "../../base/BaseInput/BaseInput"
+import BaseButton from "../../base/BaseButton/BaseButton"
+import BaseCheckbox from "../../base/BaseCheckbox/BaseCheckbox"
+
+// Компонент оплаты подписки
 const SubscribePay = ({subscribe}) => {
     const [form, setForm] = useState({
         name: "",
