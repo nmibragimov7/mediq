@@ -115,7 +115,7 @@ const Records = () => {
                     </div>
                 </div>
                 <div className="col-12 d-flex justify-content-center ">
-                    <BaseButton disabled={values.clinic} width={35} onClick={routeHandler}>Далее</BaseButton>
+                    <BaseButton disabled={!values.clinic} width={35} onClick={routeHandler}>Далее</BaseButton>
                 </div>
             </div>
         </div>

@@ -1,3 +1,5 @@
+import {ADD_NEW_RECORD} from "./actions"
+
 const initialState = {
     records: [
         {
@@ -27,12 +29,17 @@ const initialState = {
 
 
 const reducer = (state = initialState, action) => {
-    // const {type, payload} = action
-    // switch (type) {
-    //     default:
-    //
-    // }
-    return state
+    const {type, payload} = action
+    console.log(payload)
+    switch (type) {
+        case ADD_NEW_RECORD:
+            return {
+                ...state,
+                records: [...state.records, payload.data]
+            }
+        default:
+            return state
+    }
 }
 
 

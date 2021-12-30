@@ -1,10 +1,11 @@
+import {SET_SELECTED_DOCTOR} from "./actions"
+
 const initialState = {
     doctors: [
         {
             id: 1,
             name: "Кайратов Б.П.",
             position: "Терапевт",
-            reason: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere justo quis elit porta pretium. Maecenas fermentum justo eu mauris imperdiet iaculis.",
             avatar: "avatar-1",
             available: true,
             online: false
@@ -13,7 +14,6 @@ const initialState = {
             id: 2,
             name: "Кайратов Б.П.",
             position: "Терапевт",
-            reason: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere justo quis elit porta pretium. Maecenas fermentum justo eu mauris imperdiet iaculis.",
             avatar: "avatar-2",
             available: true,
             online: true
@@ -22,7 +22,6 @@ const initialState = {
             id: 3,
             name: "Кайратов Б.П.",
             position: "Терапевт",
-            reason: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere justo quis elit porta pretium. Maecenas fermentum justo eu mauris imperdiet iaculis.",
             avatar: "avatar-1",
             available: true,
             online: false
@@ -31,7 +30,6 @@ const initialState = {
             id: 4,
             name: "Кайратов Б.П.",
             position: "Терапевт",
-            reason: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere justo quis elit porta pretium. Maecenas fermentum justo eu mauris imperdiet iaculis.",
             avatar: "avatar-2",
             available: true,
             online: false
@@ -40,7 +38,6 @@ const initialState = {
             id: 5,
             name: "Кайратов Б.П.",
             position: "Терапевт",
-            reason: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere justo quis elit porta pretium. Maecenas fermentum justo eu mauris imperdiet iaculis.",
             avatar: "avatar-1",
             available: true,
             online: true
@@ -49,7 +46,6 @@ const initialState = {
             id: 6,
             name: "Кайратов Б.П.",
             position: "Терапевт",
-            reason: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere justo quis elit porta pretium. Maecenas fermentum justo eu mauris imperdiet iaculis.",
             avatar: "avatar-2",
             available: true,
             online: false
@@ -58,7 +54,6 @@ const initialState = {
             id: 7,
             name: "Кайратов Б.П.",
             position: "Терапевт",
-            reason: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere justo quis elit porta pretium. Maecenas fermentum justo eu mauris imperdiet iaculis.",
             avatar: "avatar-1",
             available: true,
             online: true
@@ -67,22 +62,26 @@ const initialState = {
             id: 8,
             name: "Кайратов Б.П.",
             position: "Терапевт",
-            reason: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere justo quis elit porta pretium. Maecenas fermentum justo eu mauris imperdiet iaculis.",
             avatar: "avatar-3",
             available: false,
             online: false
         },
-    ]
+    ],
+    selectedDoctor: null
 }
 
 
 const reducer = (state = initialState, action) => {
-    // const {type, payload} = action
-    // switch (type) {
-    //     default:
-    //
-    // }
-    return state
+    const {type, payload} = action
+    switch (type) {
+        case SET_SELECTED_DOCTOR:
+            return {
+                ...state,
+                [payload.key]: payload.data
+            }
+        default:
+            return state
+    }
 }
 
 

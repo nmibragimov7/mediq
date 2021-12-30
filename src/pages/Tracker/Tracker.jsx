@@ -145,7 +145,7 @@ const Tracker = () => {
                                 {
                                     hours.map(item => {
                                         return (
-                                            <span>{item.hour}</span>
+                                            <span key={item.hour}>{item.hour}</span>
                                         )
                                     })
                                 }
@@ -171,7 +171,7 @@ const Tracker = () => {
                                 {
                                     weeks.map(item => {
                                         return (
-                                            <span style={{color: "#A9ABBD"}}>{item.pulse}</span>
+                                            <span key={item.pulse} style={{color: "#A9ABBD"}}>{item.pulse}</span>
                                         )
                                     })
                                 }

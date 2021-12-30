@@ -1,12 +1,14 @@
 import {useState} from "react"
-import {useSelector} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import {useNavigate} from "react-router-dom"
 
 import styles from "./style.module.scss"
 import BaseInput from "../../components/base/BaseInput/BaseInput"
 import {doctors} from "../../store/getters/getters"
+import {setSelectedDoctor} from "../../store/doctors/actions";
 
 const SelectDoctor = () => {
+    const dispatch = useDispatch()
     const [form, setForm] = useState({
         doctor: ""
     })
@@ -18,6 +20,7 @@ const SelectDoctor = () => {
     const routeHandler = (item) => {
         if(item.available) {
             navigate("/records/new-record")
+            dispatch(setSelectedDoctor(item))
         }
     }
 

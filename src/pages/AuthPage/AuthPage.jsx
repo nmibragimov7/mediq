@@ -62,11 +62,8 @@ export default function AuthPage() {
                                     >
                                         Войти
                                     </BaseButton>
-
                                 </form>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
