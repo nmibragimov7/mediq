@@ -24,7 +24,7 @@ const Profile = () => {
     const cardHandler = (redordId) => {
         navigate(`/profile/records/${redordId}`)
     }
-    console.log(items)
+
     return (
         <>
             {

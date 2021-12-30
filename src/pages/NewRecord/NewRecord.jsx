@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import {useDispatch, useSelector} from "react-redux"
 import {useNavigate} from "react-router-dom"
+import {toast} from 'react-toastify'
 
 import styles from "./style.module.scss"
 import BaseInput from "../../components/base/BaseInput/BaseInput"
@@ -98,7 +99,9 @@ const NewRecord = () => {
     const onSubmit = (e) => {
         e.preventDefault()
         if(!doctor) {
-            console.log("Вернитесь на страницу выбора доктора")
+            toast.error("Вернитесь на страницу выбора доктора", {
+                position: "top-center"
+            })
             return
         }
         dispatch(addRecord({
@@ -112,10 +115,13 @@ const NewRecord = () => {
             department: "Терапевтическое",
             diagnosis: ""
         }))
+
         navigate("/profile")
+        toast.success("Новая запись добавлена 👌", {
+            position: "top-center"
+        })
     }
     const handleDateChange = (date) => {
-        console.log("change", date)
         setForm(form => ({...form, date: date}))
     }
 
