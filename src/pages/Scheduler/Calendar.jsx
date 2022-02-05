@@ -6,7 +6,6 @@ import s from "./indes.module.css"
 const getArrayFromSize = (num) => new Array(num).fill(undefined).map((_, i) => i);
 
 const Calendar = ({now}) => {
-    const currentMonday = useMemo(() => (now.startOf("week")), [])
     const daysInWeek = getArrayFromSize(7)
     let count = -1
     return (
@@ -18,7 +17,7 @@ const Calendar = ({now}) => {
                         daysInWeek.map(d => {
                             count++
                             return <SchedulerCard key={d}
-                                                  day={currentMonday.plus({day: count}).day}/>
+                                                  day={now.startOf("week").plus({day: count}).day}/>
                         })
                     }</SchedulerRow>
                 })
