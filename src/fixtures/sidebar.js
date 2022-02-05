@@ -21,5 +21,10 @@ export const menus = [
         path: "/profile",
         name: "Профиль",
         icon: "/images/profile-i.svg"
+    },
+    {
+        path: "/scheduler",
+        name: "Заметки",
+        icon: "/images/profile-i.svg"
     }
 ]
