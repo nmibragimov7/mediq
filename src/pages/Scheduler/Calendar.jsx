@@ -1,23 +1,20 @@
-import React, {useMemo} from 'react';
+import React from 'react';
 import SchedulerRow from "./SchedulerRow";
 import SchedulerCard from "./SchedulerCard";
 import s from "./indes.module.css"
 
-const getArrayFromSize = (num) => new Array(num).fill(undefined).map((_, i) => i);
 
-const Calendar = ({now}) => {
-    const daysInWeek = getArrayFromSize(7)
-    let count = -1
+const Calendar = ({data, onShowEvent}) => {
     return (
         <div className={"h-100"}>
             {
-                getArrayFromSize(5).map(e => {
+                data.map((days, i) => {
                     return <SchedulerRow classes={s.h25}
-                                         key={e}>{
-                        daysInWeek.map(d => {
-                            count++
-                            return <SchedulerCard key={d}
-                                                  day={now.startOf("week").plus({day: count}).day}/>
+                                         key={i}>{
+                        days.map(d => {
+                            return <SchedulerCard key={d.id}
+                                                  onShowEvent={onShowEvent}
+                                                  day={d}/>
                         })
                     }</SchedulerRow>
                 })
