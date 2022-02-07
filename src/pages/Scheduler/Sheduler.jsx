@@ -1,8 +1,8 @@
-import React, { useMemo, useState, useEffect } from 'react';
-import { Info, DateTime } from "luxon";
+import React, {useMemo, useState, useEffect} from 'react';
+import {Info, DateTime} from "luxon";
 import SchedulerRow from "./SchedulerRow";
 import Calendar from "./Calendar";
-import { getArrayFromSize } from "../../fixtures/helpers";
+import {getArrayFromSize} from "../../fixtures/helpers";
 import SelectEvent from "./SelectEvent";
 import BaseButton from "../../components/base/BaseButton/BaseButton";
 
@@ -90,14 +90,15 @@ const Scheduler = () => {
                     <BaseButton onClick={setMonth.bind(null, -1)} width={40}>Предыдущий</BaseButton>
                 </div>
                 <div className={"col-2"}>
-                    {now.toFormat("LLL yyyy")}
+                    {now.toFormat("LLLL yyyy", {locale: "ru"}).toUpperCase()}
                 </div>
                 <div className="col-5 d-flex justify-content-end">
                     <BaseButton onClick={setMonth.bind(null, 1)} width={40}>Следующий</BaseButton>
                 </div>
             </div>
             <SchedulerRow>
-                { weekdays.map(d => (<div className={"w-100 d-flex justify-content-center p-2"} key={d}>{d.toUpperCase()}</div>)) }
+                {weekdays.map(d => (
+                    <div className={"w-100 d-flex justify-content-center p-2"} key={d}>{d.toUpperCase()}</div>))}
             </SchedulerRow>
             <div className={"flex-grow-1"}>
                 <Calendar onShowEvent={onShowModal}

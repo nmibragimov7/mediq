@@ -10,4 +10,21 @@
       background: rgba(0, 0, 0, 0.05);
     }
   }
+
+  &Modal {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  &endCallI {
+    width: 53px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
 }

@@ -42,9 +42,13 @@
 
 .event {
     cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(197, 197, 197, 0.5);;
 }
 
 .event:hover {
     opacity: 0.5;
     color: #6A35F7;
 }
+
+
