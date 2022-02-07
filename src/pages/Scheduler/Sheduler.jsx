@@ -32,9 +32,9 @@ const Scheduler = () => {
         setData(dayRows => {
             return dayRows.map(days => {
                 const arr = days.map(d => {
-                    if (d.id === nextCard.id) {
+                    if (d.id === nextCard.id && currentCard.records.length > 0) {
                         return {...d, records: currentCard.records}
-                    } else if (d.id === currentCard.id) {
+                    } else if (d.id === currentCard.id && currentCard.records.length > 0) {
                         return {...d, records: []}
                     }
                     return d
