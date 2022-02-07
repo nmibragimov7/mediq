@@ -1,0 +1,50 @@
+.row {
+    /*border-bottom: 1px solid rgba(197, 197, 197, 0.5);*/
+}
+
+.col {
+    border: 1px solid rgba(197, 197, 197, 0.5);
+}
+
+.h25 {
+    height: 20%;
+}
+
+.gray {
+    background: rgba(115, 115, 115, 0.1);
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.button {
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+.button:hover {
+    opacity: 0.5;
+}
+
+.buttonRemove {
+    cursor: pointer;
+    border-radius: 5px;
+    color: #E8896D;
+    padding: 5px 10px;
+    border: 1px solid #E8896D;
+}
+
+.buttonRemove:hover {
+    background: #E8896D;
+    color: #FFF;
+}
+
+.event {
+    cursor: pointer;
+}
+
+.event:hover {
+    opacity: 0.5;
+    color: #6A35F7;
+}

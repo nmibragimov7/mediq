@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react"
-import {useParams} from "react-router-dom"
-import {useSelector} from "react-redux"
+import React, { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 import styles from "./style.module.scss"
-import {records} from "../../store/getters/getters"
+import { records } from "../../store/getters/getters"
 
 // Страница детализации записи /profile/records/:id
 const RecordDetail = () => {

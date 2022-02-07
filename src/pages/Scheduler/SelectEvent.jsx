@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
-import BaseModal from "../../components/base/BaseModal/BaseModal";
+import React, { useState } from 'react';
 
-import {records as fixtures} from "../../fixtures/records";
+import BaseModal from "../../components/base/BaseModal/BaseModal";
+import { records as fixtures } from "../../fixtures/records";
+import s from "./index.module.css";
+
 
 const SelectEvent = ({
                          isShow,
@@ -17,7 +19,7 @@ const SelectEvent = ({
     return (
         <BaseModal isShowed={isShow} onClose={setIsShow.bind(null, false)}>
             {records.map(r => {
-                return <div key={r.id} onClick={onSelectHandler.bind(null, r)}>{r.text}</div>
+                return <div key={r.id} className={`mb-2 ${s.event}`} onClick={onSelectHandler.bind(null, r)}>{r.text}</div>
             })}
         </BaseModal>
     );

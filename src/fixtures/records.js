@@ -1,7 +1,8 @@
-export const records = [{
-    id: 1,
-    text: "Прессотерапия"
-},
+export const records = [
+    {
+        id: 1,
+        text: "Прессотерапия"
+    },
     {
         id: 2,
         text: "Анализы"
@@ -12,7 +13,7 @@ export const records = [{
     },
     {
         id: 4,
-        text: "Диагностика ( экг, узи)"
+        text: "Диагностика (экг, узи)"
     },
     {
         id: 5,

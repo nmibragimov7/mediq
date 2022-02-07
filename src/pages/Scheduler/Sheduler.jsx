@@ -1,9 +1,10 @@
-import React, {useMemo, useState, useEffect} from 'react';
-import {Info, DateTime} from "luxon";
+import React, { useMemo, useState, useEffect } from 'react';
+import { Info, DateTime } from "luxon";
 import SchedulerRow from "./SchedulerRow";
 import Calendar from "./Calendar";
-import {getArrayFromSize} from "../../fixtures/helpers";
+import { getArrayFromSize } from "../../fixtures/helpers";
 import SelectEvent from "./SelectEvent";
+import BaseButton from "../../components/base/BaseButton/BaseButton";
 
 const Scheduler = () => {
     const [modalData, setModalData] = useState({
@@ -14,12 +15,40 @@ const Scheduler = () => {
     const onShowModal = (id) => {
         setModalData(prev => ({isShow: true, dateId: id}))
     }
+    const onRemove = (id) => {
+        setData(dayRows => {
+            return dayRows.map(days => {
+                const arr = days.map(d => {
+                    if (d.id === id) {
+                        return {...d, records: []}
+                    }
+                    return d
+                })
+                return arr
+            })
+        })
+    }
+    const onReplace = (currentCard, nextCard) => {
+        setData(dayRows => {
+            return dayRows.map(days => {
+                const arr = days.map(d => {
+                    if (d.id === nextCard.id) {
+                        return {...d, records: currentCard.records}
+                    } else if (d.id === currentCard.id) {
+                        return {...d, records: []}
+                    }
+                    return d
+                })
+                return arr
+            })
+        })
+    }
     const weekdays = useMemo(() => {
         return Info.weekdays("short", {
             locale: "ru"
         })
     }, [])
-    const [now, setNow] = useState(DateTime.local())
+    const [now, setNow] = useState(DateTime.local().startOf("month"))
     const setMonth = (month) => {
         setNow((prev) => prev.plus({month}))
     }
@@ -56,22 +85,25 @@ const Scheduler = () => {
     }
     return (
         <div className={"h-100 d-flex flex-column"}>
-            <div className="row">
-                <div className="col-4">
-                    <button onClick={setMonth.bind(null, -1)}>пред</button>
+            <div className="row mb-3 d-flex align-items-center">
+                <div className="col-5">
+                    <BaseButton onClick={setMonth.bind(null, -1)} width={40}>Предыдущий</BaseButton>
                 </div>
-                <div className={"col-4"}>
-                    {now.toFormat("dd/MM/yyyy")}
+                <div className={"col-2"}>
+                    {now.toFormat("LLL yyyy")}
                 </div>
-                <div className="col-4">
-                    <button onClick={setMonth.bind(null, 1)}>След</button>
+                <div className="col-5 d-flex justify-content-end">
+                    <BaseButton onClick={setMonth.bind(null, 1)} width={40}>Следующий</BaseButton>
                 </div>
             </div>
             <SchedulerRow>
-                {weekdays.map(d => (<div className={"w-100"} key={d}>{d.toUpperCase()}</div>))}
+                { weekdays.map(d => (<div className={"w-100 d-flex justify-content-center p-2"} key={d}>{d.toUpperCase()}</div>)) }
             </SchedulerRow>
             <div className={"flex-grow-1"}>
-                <Calendar onShowEvent={onShowModal} data={data}/>
+                <Calendar onShowEvent={onShowModal}
+                          onRemove={onRemove}
+                          onReplace={onReplace}
+                          data={data}/>
             </div>
             <SelectEvent isShow={modalData.isShow}
                          onSelect={onAddEvent}

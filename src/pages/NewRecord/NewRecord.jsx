@@ -109,7 +109,7 @@ const NewRecord = () => {
             polyclinic: "Городская поликлиника №2",
             service: doctor.position,
             reason: form.reason,
-            date: `${new Date(form.date).getDate()}-${new Date(form.date).getMonth() + 1}-${new Date(form.date).getFullYear()}`,
+            date: `${new Date(form.date).getDate()}.${new Date(form.date).getMonth() + 1}.${new Date(form.date).getFullYear()}`,
             time: form.time,
             doctor: doctor.name,
             department: "Терапевтическое",

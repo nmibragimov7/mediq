@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SchedulerRow from "./SchedulerRow";
 import SchedulerCard from "./SchedulerCard";
-import s from "./indes.module.css"
+import s from "./index.module.css";
 
+const Calendar = ({data, onShowEvent, onRemove, onReplace}) => {
+    const [currentCard, setCurrentCard] = useState(null)
+    const setNextCard = (nextCard) => {
+        onReplace(currentCard, nextCard)
+    }
 
-const Calendar = ({data, onShowEvent}) => {
     return (
         <div className={"h-100"}>
             {
@@ -13,7 +17,10 @@ const Calendar = ({data, onShowEvent}) => {
                                          key={i}>{
                         days.map(d => {
                             return <SchedulerCard key={d.id}
+                                                  setCurrentCard={setCurrentCard}
+                                                  setNextCard={setNextCard}
                                                   onShowEvent={onShowEvent}
+                                                  onRemove={onRemove}
                                                   day={d}/>
                         })
                     }</SchedulerRow>
