@@ -3,12 +3,14 @@ import userReducer from "./auth/reducer";
 import recordsReducer from "./records/reducer";
 import doctorsReducer from "./doctors/reducer";
 import analyzesReducer from "./analyzes/reducer";
+import schedulerReducer from "./scheduler/reducer";
 
 const rootReducer = combineReducers({
     users: userReducer,
     records: recordsReducer,
     doctors: doctorsReducer,
-    analyzes: analyzesReducer
+    analyzes: analyzesReducer,
+    scheduler: schedulerReducer
 })
 
 

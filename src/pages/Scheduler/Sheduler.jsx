@@ -1,12 +1,18 @@
-import React, {useMemo, useState, useEffect} from 'react';
-import {Info, DateTime} from "luxon";
-import SchedulerRow from "./SchedulerRow";
-import Calendar from "./Calendar";
-import {getArrayFromSize} from "../../fixtures/helpers";
-import SelectEvent from "./SelectEvent";
-import BaseButton from "../../components/base/BaseButton/BaseButton";
+import React, {useMemo, useState, useEffect} from 'react'
+import {Info, DateTime} from "luxon"
+import {useDispatch, useSelector} from "react-redux"
+
+import SchedulerRow from "./SchedulerRow"
+import Calendar from "./Calendar"
+import {getArrayFromSize} from "../../fixtures/helpers"
+import SelectEvent from "./SelectEvent"
+import BaseButton from "../../components/base/BaseButton/BaseButton"
+import {saveData} from  "../../store/scheduler/actions"
+import {scheduler} from "../../store/getters/getters"
 
 const Scheduler = () => {
+    const dispatch = useDispatch()
+    const items = useSelector(scheduler)
     const [modalData, setModalData] = useState({
         dateId: null,
         isShow: false
@@ -50,6 +56,17 @@ const Scheduler = () => {
     }, [])
     const [now, setNow] = useState(DateTime.local().startOf("month"))
     const setMonth = (month) => {
+        const arr = data.reduce((prev, current) => {
+            current.forEach(item => {
+                if(item.records.length) {
+                    prev.push(item)
+                }
+            })
+
+            return prev
+        }, items)
+
+        saveData(arr)
         setNow((prev) => prev.plus({month}))
     }
     const [data, setData] = useState([])
@@ -59,13 +76,24 @@ const Scheduler = () => {
             return weekdays.map(e => {
                 count++
                 return {
-                    id: count,
+                    id: now.startOf("week").plus({day: count}).toFormat("dd.MM.yyyy"),
                     day: now.startOf("week").plus({day: count}).day,
                     records: []
                 }
             })
         })
-        setData(() => arrData)
+        const copy = arrData.map(row => {
+            return row.map(col => {
+                const i = items.findIndex(item => item.id === col.id)
+                if(i >= 0) {
+                    const copy = items[i]
+                    items.splice(i, 1)
+                    return copy
+                }
+                return col
+            })
+        })
+        setData(prev => copy)
     }, [now])
     const onAddEvent = (record) => {
         setData(dayRows => {
@@ -98,7 +126,7 @@ const Scheduler = () => {
             </div>
             <SchedulerRow>
                 {weekdays.map(d => (
-                    <div className={"w-100 d-flex justify-content-center p-2"} key={d}>{d.toUpperCase()}</div>))}
+                    <div className={"w-100 d-flex justify-content-center p-2"} key={d}><strong>{d.toUpperCase()}</strong></div>))}
             </SchedulerRow>
             <div className={"flex-grow-1"}>
                 <Calendar onShowEvent={onShowModal}

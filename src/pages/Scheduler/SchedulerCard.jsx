@@ -24,10 +24,10 @@ const SchedulerCard = ({day, setCurrentCard, setNextCard, onShowEvent, onRemove}
              onDragStart={(e) => dragStartHandler(e, day)}
              onDragOver={(e) => dragOverHandler(e)}
              onDrop={(e) => dropHandler(e, day)}>
-            <div className={`d-flex justify-content-center align-items-center ${s.grow}`}>
+            <div className={`d-flex justify-content-center align-items-center ${s.grow}`} style={{"fontSize": "22px"}}>
                 {day.day}
             </div>
-            <div className={s.grow}>
+            <div className={`${s.grow} d-flex justify-content-center`} style={{"width": "100%"}}>
                 {day.records.map(r => {
                     return <div key={r.id} className={`d-flex flex-column justify-content-center align-items-center`}>
                         <div className={"mb-2"}
